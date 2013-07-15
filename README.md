@@ -1,44 +1,26 @@
-# minted – highlighted source code for LaTeX
+minted
+======
+#### highlighted source code for LaTeX
 
-`minted` is a package that facilitates expressive syntax highlighting in LaTeX
-using the powerful Pygments library. The package also provides options to
-customize the highlighted source code output using fancyvrb.
+`minted` is a [LaTeX](http://www.latex-project.org/) package that uses the [Pygments library](http://pygments.org/) to highlight syntax.
 
-For instance, this code:
+`minted` was created by [Konrad Rudolph](https://github.com/klmr) and is now maintained by [Geoffrey Poore](https://github.com/gpoore) on [github](https://github.com/gpoore/minted).
 
-    :::latex
-    \begin{minted}[mathescape,
-                   linenos,
-                   numbersep=5pt,
-                   gobble=2,
-                   frame=lines,
-                   framesep=2mm]{csharp}
-      string title = "This is a Unicode π in the sky"
-      /*
-      Defined as $\pi=\lim_{n\to\infty}\frac{P_n}{d}$ where $P$ is the perimeter
-      of an $n$-sided regular polygon circumscribing a
-      circle of diameter $d$.
-      */
-      const double pi = 3.1415926535
-    \end{minted}
+This fork of `minted` v1.7 is to test features of a [Pygments fork](https://bitbucket.org/jambonrose/pygments-main/), documented [here](https://bitbucket.org/jambonrose/pygments-main/wiki/).
 
-will produce the following rendering:
+This `minted` fork specifically tests:
 
-![screenshot](http://i.stack.imgur.com/OLUjl.png)
+- bold lines (`b_lines`)
+- strike (out) lines (`so_lines`)
+- highlight lines (`hl_lines`)
+- diff style output (`difflines`)
 
-See [the documentation](https://bitbucket.org/klmr/minted/downloads/minted.pdf) for examples and instructions of installation
-and usage.
+Unless you are intent on using features in the Pygments fork above, using the [official `minted` distribution](http://www.ctan.org/pkg/minted) is advisable.
 
-## Availability
+Similarly, only issues pertaining to the options above should be raised here. Any other issues should be raised on the [official `minted` repository](https://github.com/gpoore/minted).
 
-`minted` is distributed with both TeX Live and MikTeX. It is also available from [CTAN](http://www.ctan.org/tex-archive/macros/latex/contrib/minted). In any case, [Pygments](http://pygments.org/download/) needs to be installed separately. The documentation contains information on how to do that.
+### License
 
-## License
+`minted` is distributed under the [LaTeX Project Public License](http://www.latex-project.org/lppl.txt) and the [New BSD License](http://opensource.org/licenses/BSD-3-Clause).
 
-This work may be distributed and/or modified under the conditions of the LaTeX
-Project Public License, either version 1.3 of this license or (at your option)
-any later version.
-Additionally, the project may be distributed under the terms of the new [BSD
-license](http://opensource.org/licenses/BSD-3-Clause).
-
-For suggestions and bug reports, please go to the project’s hosting site at <https://bitbucket.org/klmr/minted>.
+This fork is distributed under the [Simplified BSD License](http://opensource.org/licenses/BSD-2-Clause), in compliance with clause 10 of the LPPL, and in compliance with the New BSD License.
